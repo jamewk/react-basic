@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ProductItem from "./components/product/ProductItem"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <ProductItem productName="IPhone 10" unitPrice="43000"/>
+      <ProductItem productName="IPhone 11" unitPrice="45000"/>
+      <ProductItem productName="IPhone 12" unitPrice="50000"/>
+      <Footer company="Jamewklab" email="jamewk01@gmail.com"/>
     </div>
   );
 }
