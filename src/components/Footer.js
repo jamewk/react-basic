@@ -3,13 +3,17 @@ const Footer = (props) =>{
     return (
         <div>
             <hr />
-            <div className="text-center title text-uppercase">
+            <div className="text-center title">
                 <small>
-                    <span className="text-danger">
-                        Powered by {company} 
-                    </span> | 	&nbsp;
                     <span className="text-muted">
-                        Contact By Email : {email}
+                        Powered by {company} |
+                    </span>&nbsp;
+                    <span className="text-muted">
+                        Contact By Email: 
+                    </span>
+                    &nbsp;
+                    <span className="text-info">
+                        {email}
                     </span>
                 </small>
             </div>

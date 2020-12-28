@@ -33,8 +33,8 @@ class Calculator extends Component {
                     <hr />
                     <div className="row">
                         <div className="col-12 text-right">
-                            <button className="btn btn-block btn-sm btn-success title mr-1">ยืนยัน</button>
-                            <button className="btn btn-block btn-sm btn-danger title">ยกเลิก</button>
+                            <button className="btn btn-block btn-sm btn-success title mr-1" onClick={() => this.props.onConfirmOrder()}>ยืนยัน</button>
+                            <button className="btn btn-block btn-sm btn-danger title" onClick={() => this.props.onCancelOrder()}>ยกเลิก</button>
                         </div>
                     </div>
                 </div>

@@ -8,8 +8,6 @@ class ProductList extends Component {
             return this.props.products.map(v=>(
                 <ProductItem key={v.productId} product={v} onAddOrder={this.props.onAddOrder}/>
             ))
-        }else{
-            // return <div className="text-secondary">ไม่มีรายการสินค้า</div>
         }
     }
 

@@ -5,7 +5,7 @@ class ProductItem extends Component {
         const {productName , unitPrice , thumbnail} = this.props.product;
 
         return (
-            <div className="col-md-3 col-sm-6">
+            <div className="col-lg-3 col-md-6 col-sm-6">
                 <div className="card mb-3">
                     <div className="card-body">
                         <img className="img-fluid img-thumbnail" src={thumbnail} alt=""/>
