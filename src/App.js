@@ -1,31 +1,27 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import MoniTor from "./components/monitor/Monitor"
 import { Component } from "react";
-import axios from "axios"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./containers/Home";
+import About from "./containers/About";
+import Order from "./containers/order/Order";
+import Product from "./containers/product/Product";
+import NotFound from "./containers/error/NotFound";
 
 class App extends Component {
-
-  constructor(props){
-    super(props);
-    this.state = {product: null};
-  }
-
-  componentDidMount(){
-    axios.get("http://localhost:3001/products").then(res=>{
-      this.setState({products: res.data || []});
-    })
+  renderRouter(){
+    return (
+      <Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/about" component={About} />
+        <Route exact path="/orders" component={Order} />
+        <Route exact path="/products" component={Product} />
+        <Route component={ NotFound } />
+      </Switch>
+    )
   }
 
   render(){
     return (
-      <div>
-        <Header />
-        <div className="container-fluid">
-          <MoniTor products={this.state.products} />
-        </div>
-        <Footer company="Jamewk" email="jamewk01@gmail.com"/>
-      </div>
+      <BrowserRouter>{this.renderRouter()}</BrowserRouter>
     );
   }
 
