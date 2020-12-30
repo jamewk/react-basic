@@ -47,7 +47,7 @@ class Order extends Component {
                     {this.showOrders()}
                     </div>
                 </div>
-                <Footer company="Jamewk" email="jamewk01@gmail.com"/>
+                <Footer />
 			</div>
 		);
 	}

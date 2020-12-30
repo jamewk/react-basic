@@ -17,7 +17,7 @@ class Home extends Component {
         <div className="container-fluid">
           <MoniTor products={this.props.products} />
         </div>
-        <Footer company="Jamewk" email="jamewk01@gmail.com"/>
+        <Footer />
       </div>
     );
   }

@@ -19,7 +19,7 @@ class Product extends Component {
 	}
 
 	editProduct(product) {
-		this.props.history.push('products/' + product.id + '/edit');
+		this.props.history.push('products/edit/' + product.id);
 	}
 
 	delProduct(product) {
@@ -36,7 +36,7 @@ class Product extends Component {
 							<h1>สินค้า</h1>
 						</div>
 						<div className="col-6">
-							<button className="btn btn-success btn-sm title float-right" onClick={() => this.props.history.push('products/create')}>เพิ่ม</button>
+							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('products/add')}>เพิ่มสินค้า</button>
 						</div>
 					</div>
 					<ProductList products={this.props.products} 
@@ -44,7 +44,7 @@ class Product extends Component {
 						onDelProduct={this.delProduct}  
 					/>
 				</div>
-				<Footer company="Jamewk" email="jamewk01@gmail.com"/>
+				<Footer />
 			</div>
 		);
 	}
