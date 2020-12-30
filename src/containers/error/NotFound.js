@@ -11,7 +11,7 @@ const NotFound = () => {
                 <h2 className="mb-4">Not Found</h2>
                 <p className="title mb-5">ขออภัยไม่พบหน้าที่คุณค้นหา ดูเหมือนว่าหน้าเว็บที่คุณพยายามเข้าถึงไม่มีอยู่อีกต่อไปหรืออาจจะย้ายไปยังหน้าเว็บเพจอื่น </p>
             </div>
-            <Footer />
+            <Footer company="Jamewk" email="jamewk01@gmail.com"/>
         </div>
     )
 }
