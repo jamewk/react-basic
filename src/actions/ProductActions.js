@@ -8,14 +8,16 @@ import {
 import { reset } from 'redux-form';
 
 export const productFetch = id => {
+	
 	return dispatch => {
 		axios
-			.get(`${process.env.REACT_APP_API_URL}/products/` + id)
+			.get(`${process.env.REACT_APP_API_URL}/products/${id}`)
 			.then(res => dispatch({ type: PRODUCT_FETCH, payload: res.data }));
 	};
 };
 
 export const productsFetch = () => {
+	console.log(process.env);
 	return dispatch => {
 		axios
 			.get(`${process.env.REACT_APP_API_URL}/products`)
@@ -25,7 +27,7 @@ export const productsFetch = () => {
 
 export const productDelete = id => {
 	return dispatch => {
-		axios.delete(`${process.env.REACT_APP_API_URL}/products/` + id).then(res => {
+		axios.delete(`${process.env.REACT_APP_API_URL}/products/${id}`).then(res => {
 			axios
 				.get(`${process.env.REACT_APP_API_URL}/products`)
 				.then(res =>
@@ -46,7 +48,7 @@ export const productCreate = values => {
 
 export const productUpdate = (id, values) => {
 	return dispatch => {
-		axios.put(`${process.env.REACT_APP_API_URL}/products/` + id, values).then(res => {
+		axios.put(`${process.env.REACT_APP_API_URL}/products/${id}`, values).then(res => {
 			dispatch({ type: PRODUCT_UPDATE });
 		});
 	}	
