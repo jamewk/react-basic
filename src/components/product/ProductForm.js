@@ -41,7 +41,7 @@ function validate(values) {
 	const errors = {};
 	productFormField.forEach(({ name, required }) => {
 		if (!values[name] && required) {
-			errors[name] = "กรุณากรอกข้อมูล";
+			errors[name] = "โปรดระบุ";
 		}
 	});
 	return errors;
