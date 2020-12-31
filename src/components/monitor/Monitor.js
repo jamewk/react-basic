@@ -56,13 +56,23 @@ class Monitor extends Component {
                 </div>
                 }
                 <div className="row">
-                    <div className="col-lg-9 col-md-6 col-sm-12">
-                       <ProductList products={this.props.products} onAddOrder={this.addOrder}/>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-12">
-                        <Calculator totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder} onCancelOrder={this.cancelOrder} onConfirmOrder={this.confirmOrder}/>
-                    </div>
-                </div>
+					<div className="col-6">
+						<h1>รายการสินค้า</h1>
+					</div>
+				</div>
+                {this.props.products.length > 0? 
+					<div className="row">
+                        <div className="col-lg-9 col-md-6 col-sm-12">
+                            <ProductList products={this.props.products} onAddOrder={this.addOrder}/>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-12">
+                            <Calculator totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder} onCancelOrder={this.cancelOrder} onConfirmOrder={this.confirmOrder}/>
+                        </div>
+                    </div>: 
+					<div className="col-md-12 text-center">
+						ไม่มีรายการสินค้า
+					</div> 
+				}
             </div>
         )
     }

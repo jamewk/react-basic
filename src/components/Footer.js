@@ -5,7 +5,7 @@ const Footer = () =>{
             <div className="text-center title">
                 <small>
                     <span className="text-muted">
-                        Powered by jamewk |
+                        Powered by Anuwat Rodmoung |
                     </span>&nbsp;
                     <span className="text-muted">
                         Contact By Email: 

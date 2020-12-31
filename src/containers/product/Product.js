@@ -39,10 +39,15 @@ class Product extends Component {
 							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('products/add')}>เพิ่มสินค้า</button>
 						</div>
 					</div>
-					<ProductList products={this.props.products} 
-						onEditProduct={this.editProduct} 
-						onDelProduct={this.delProduct}  
-					/>
+					{this.props.products.length > 0? 
+						<ProductList products={this.props.products} 
+							onEditProduct={this.editProduct} 
+							onDelProduct={this.delProduct}  
+						/>: 
+						<div className="col-md-12 text-center">
+							ไม่มีสินค้า
+					 	</div> 
+					}
 				</div>
 				<Footer />
 			</div>
