@@ -2,7 +2,7 @@ const Footer = () =>{
     return (
         <div>
             <hr />
-            <div className="text-center title">
+            <div className="text-center title text-uppercase">
                 <small>
                     <span className="text-muted">
                         Powered by Anuwat Rodmoung |
