@@ -114,6 +114,31 @@
         }
       ],
       "id": 2
+    },
+    {
+      "orderedDate": "2021-12-07T03:55:21.278Z",
+      "totalPrice": 340,
+      "orders": [
+        {
+          "product": {
+            "id": "3",
+            "productName": "บิงซู",
+            "unitPrice": "200",
+            "thumbnail": "/images/product/3.jpg"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "4",
+            "productName": "เฟรนฟราย",
+            "unitPrice": "140",
+            "thumbnail": "/images/product/4.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }
