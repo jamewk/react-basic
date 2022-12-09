@@ -29,7 +29,7 @@ class Header extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-8 text-left">
-                            <h2 className="text-success"><img style={style} src="/images/logo/logo.png" alt=""/> คาเฟ่ คุณอายส์</h2>
+                            <h2 className="text-success"><img style={style} src="/images/logo/logo.png" alt=""/> Cafe</h2>
                         </div>
                         <div className="col-md-4 text-right">
                             <h5 className="text-muted mt-2">
