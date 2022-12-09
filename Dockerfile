@@ -1,6 +1,6 @@
 FROM node:16-alpine AS builder
 
-COPY package*.json /
+COPY package.json /
 
 RUN npm set progress=false && npm config set depth 0 \
 	&& npm install --no-install-recommends \
@@ -11,7 +11,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm run build
+RUN npm run build --prod
 
 FROM node:16-alpine
 
